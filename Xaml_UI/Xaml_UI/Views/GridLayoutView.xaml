@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xaml_UI.Views.GridLayoutView">
+  <ContentView.Content>
+        <ScrollView>
+        <Grid x:Name="LayoutGrid" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.7*"/>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="0.6*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Frame BackgroundColor="#252A8D" CornerRadius="10" Margin="10" Grid.Row="0" Grid.ColumnSpan="3">
+                <Label Text="Xamarin.Forms Grid Layout" HorizontalOptions="Center" VerticalTextAlignment="Center" TextColor="white"/>
+            </Frame>
+            <Frame BorderColor="#252A8D" CornerRadius="10" Margin="10" Grid.Row="1" Grid.ColumnSpan="3">
+                <BoxView BackgroundColor="ForestGreen" CornerRadius="10"></BoxView>
+            </Frame>
+
+            <Frame BackgroundColor="Red" CornerRadius="10" HorizontalOptions="StartAndExpand" Grid.Row="2" Grid.Column="0" Margin="10, 0, 0 ,0">
+                <Label Text="Left Box" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="Yellow" CornerRadius="10" HorizontalOptions="CenterAndExpand" Grid.Row="2" Grid.Column="1">
+                <Label Text="Center Box" HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Frame BackgroundColor="Blue" CornerRadius="10" HorizontalOptions="EndAndExpand" Grid.Row="2" Grid.Column="2" Margin="0, 0, 10 ,0">
+                <Label Text="Right Box" TextColor="White" />
+            </Frame>
+
+            <Frame BackgroundColor="Red" CornerRadius="10" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0" Margin="10, 10, 0 ,0" x:Name="BottomRed">
+                <Label Text="Left Box" TextColor="White" />
+            </Frame>
+            <Frame BackgroundColor="Yellow" CornerRadius="10" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="1" Margin="0, 10, 0 ,0" x:Name="BottomYellow">
+                <Label Text="Center Box" HorizontalTextAlignment="Center"/>
+            </Frame>
+            <Frame BackgroundColor="Blue" CornerRadius="10" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="2" Margin="0, 10, 10 ,0" x:Name="BottomBlue">
+                <Label Text="Right Box" TextColor="White" HorizontalTextAlignment="End" />
+            </Frame>
+        </Grid>
+        </ScrollView>
+    </ContentView.Content>
+</ContentView>
